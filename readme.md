@@ -1,4 +1,4 @@
-# postgres-bytea [![Build Status](https://travis-ci.org/bendrucker/postgres-bytea.svg?branch=master)](https://travis-ci.org/bendrucker/postgres-bytea)
+# postgres-bytea [![Build Status](https://travis-ci.org/bendrucker/postgres-bytea.svg?branch=master)](https://travis-ci.org/bendrucker/postgres-bytea) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/postgres-bytea.svg)](https://greenkeeper.io/)
 
 > Postgres bytea parser
 
