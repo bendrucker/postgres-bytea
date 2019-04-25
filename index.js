@@ -3,7 +3,7 @@
 module.exports = function parseBytea (input) {
   if (/^\\x/.test(input)) {
     // new 'hex' style response (pg >9.0)
-    return new Buffer(input.substr(2), 'hex')
+    return Buffer.from(input.substr(2), 'hex')
   }
   var output = ''
   var i = 0
@@ -27,5 +27,5 @@ module.exports = function parseBytea (input) {
       }
     }
   }
-  return new Buffer(output, 'binary')
+  return Buffer.from(output, 'binary')
 }
