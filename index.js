@@ -5,8 +5,8 @@ module.exports = function parseBytea (input) {
     // new 'hex' style response (pg >9.0)
     return Buffer.from(input.substr(2), 'hex')
   }
-  var output = ''
-  var i = 0
+  let output = ''
+  let i = 0
   while (i < input.length) {
     if (input[i] !== '\\') {
       output += input[i]
@@ -16,11 +16,11 @@ module.exports = function parseBytea (input) {
         output += String.fromCharCode(parseInt(input.substr(i + 1, 3), 8))
         i += 4
       } else {
-        var backslashes = 1
+        let backslashes = 1
         while (i + backslashes < input.length && input[i + backslashes] === '\\') {
           backslashes++
         }
-        for (var k = 0; k < Math.floor(backslashes / 2); ++k) {
+        for (let k = 0; k < Math.floor(backslashes / 2); ++k) {
           output += '\\'
         }
         i += Math.floor(backslashes / 2) * 2
