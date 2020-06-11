@@ -14,7 +14,7 @@
     "node": ">= 6"
   },
   "scripts": {
-    "test": "standard && tape test.js"
+    "test": "standard && tape *.js"
   },
   "keywords": [
     "bytea",
@@ -22,13 +22,17 @@
     "binary",
     "parser"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "obuf": "~1.1.2"
+  },
   "devDependencies": {
+    "concat-stream": "2.0.0",
+    "standard": "^14.0.0",
+    "stream-to-promise": "^3.0.0",
     "tape": "^5.0.0",
-    "standard": "^14.0.0"
+    "tape-promise": "4.0.0"
   },
   "files": [
-    "index.js",
-    "readme.md"
+    "*.js"
   ]
 }
