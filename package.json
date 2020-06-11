@@ -33,6 +33,6 @@
     "tape-promise": "4.0.0"
   },
   "files": [
-    "src"
+    "*.js"
   ]
 }
