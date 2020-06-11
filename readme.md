@@ -63,9 +63,13 @@ Type: `string`
 
 A Postgres bytea binary string.
 
-#### `new bytea.Decoder()` -> `Transform`-stream
+#### `new bytea.Decoder()` -> `stream.Transform`
 
-#### `new bytea.Encoder()` -> `Transform`-stream
+Creates a bytea decoder stream that emits buffer chunks.
+
+#### `new bytea.Encoder()` -> `stream.Transform`
+
+Creates a bytea encoder stream that receives buffer chunks and emits them as bytea strings.
 
 ## Prefix Escaping
 
