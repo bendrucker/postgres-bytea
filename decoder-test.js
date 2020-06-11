@@ -16,12 +16,13 @@ test('decoder', (t) => {
     }
   })
 
-  t.test('fails if not prefixed with \\\\x', (t) => {
-    t.throws(() => {
-      const dest = new Decoder()
-      dest.write(Buffer.from('616263'))
-    }, /prefix/)
-    t.end()
+  t.test('fails if not prefixed with \\\\x', async (t) => {
+    const dest = new Decoder()
+    const promise = streamToPromise(dest)
+
+    dest.write(Buffer.from('616263'))
+
+    await t.rejects(promise, /prefix/)
   })
 
   t.end()

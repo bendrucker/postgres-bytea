@@ -24,7 +24,7 @@ class ByteaDecoder extends Transform {
           const prefix = this._incomingChunks.take(3)
           const prefixString = prefix.toString()
           if (prefixString !== '\\\\x') {
-            throw new Error(`Expected double-escaped postgres bytea hex format prefix, received: '${prefixString}'`)
+            return this.emit('error', new Error(`Expected double-escaped postgres bytea hex format prefix, received: '${prefixString}'`))
           }
           this._state = State.READ_DATA
           continue
