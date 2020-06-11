@@ -2,7 +2,7 @@
 
 const test = require('tape')
 
-const { byteaToBinary } = require('..')
+const { byteaToBinary } = require('./')
 
 test('bytea to binary handles pg <9 escape format', (t) => {
   const buffer = Buffer.from([102, 111, 111, 0, 128, 92, 255])

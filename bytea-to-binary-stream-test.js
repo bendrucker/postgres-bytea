@@ -2,8 +2,8 @@ var tape = require('tape')
 var _test = require('tape-promise').default
 var test = _test(tape)
 
-const { assertConvertsTo } = require('./streamTestSupport')
-const { byteaToBinaryStream } = require('..')
+const { assertConvertsTo } = require('./test-support')
+const { byteaToBinaryStream } = require('./')
 
 test('bytea to binary stream gives correct result when input cuts at chunk boundary multiple ways', async (t) => {
   const input = [...Buffer.from('\\\\x616263').values()]

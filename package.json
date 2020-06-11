@@ -14,7 +14,7 @@
     "node": ">= 6"
   },
   "scripts": {
-    "test": "standard && tape test/**/*.test.js"
+    "test": "standard && tape *.js"
   },
   "keywords": [
     "bytea",

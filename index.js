@@ -1,10 +1,7 @@
 'use strict'
 
-const binaryToByteaStream = require('./src/binaryToByteaStream')
-const byteaToBinary = require('./src/byteaToBinary')
-const byteaToBinaryStream = require('./src/byteaToBinaryStream')
+const byteaToBinary = module.exports = require('./bytea-to-binary')
 
-module.exports = byteaToBinary // default export for backwards compatibility
-module.exports.binaryToByteaStream = binaryToByteaStream
-module.exports.byteaToBinary = byteaToBinary
-module.exports.byteaToBinaryStream = byteaToBinaryStream
+byteaToBinary.byteaToBinary = byteaToBinary
+byteaToBinary.binaryToByteaStream = require('./binary-to-bytea-stream')
+byteaToBinary.byteaToBinaryStream = require('./bytea-to-binary-stream')

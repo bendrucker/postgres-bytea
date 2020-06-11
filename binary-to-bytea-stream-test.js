@@ -2,8 +2,8 @@ var tape = require('tape')
 var _test = require('tape-promise').default
 var test = _test(tape)
 
-const { assertConvertsTo } = require('./streamTestSupport')
-const { binaryToByteaStream } = require('..')
+const { assertConvertsTo } = require('./test-support')
+const { binaryToByteaStream } = require('./')
 
 test('binary to bytea stream empty input gives empty result', async (t) => {
   await assertConvertsTo(t, [], binaryToByteaStream(), '\\\\x')
