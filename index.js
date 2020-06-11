@@ -1,7 +1,6 @@
 'use strict'
 
-const byteaToBinary = module.exports = require('./bytea-to-binary')
+exports = module.exports = require('./decode')
 
-byteaToBinary.byteaToBinary = byteaToBinary
-byteaToBinary.binaryToByteaStream = require('./binary-to-bytea-stream')
-byteaToBinary.byteaToBinaryStream = require('./bytea-to-binary-stream')
+exports.Encoder = require('./encoder')
+exports.Decoder = require('./decoder')

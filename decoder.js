@@ -1,3 +1,5 @@
+'use strict'
+
 const BufferList = require('obuf')
 const { Transform } = require('stream')
 
@@ -6,7 +8,7 @@ const State = {
   READ_DATA: 2
 }
 
-class ByteaToBinaryStreamTransform extends Transform {
+class ByteaDecoder extends Transform {
   constructor () {
     super()
     this._incomingChunks = new BufferList()
@@ -51,8 +53,4 @@ class ByteaToBinaryStreamTransform extends Transform {
   }
 }
 
-function byteaToBinaryStream () {
-  return new ByteaToBinaryStreamTransform()
-}
-
-module.exports = byteaToBinaryStream
+module.exports = ByteaDecoder

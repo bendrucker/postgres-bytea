@@ -1,3 +1,18 @@
+'use strict'
+
+module.exports = byteaToBinary
+
+function byteaToBinary (input) {
+  if (/^\\x/.test(input)) {
+    return byteaHexFormatToBinary(input)
+  }
+  return byteaEscapeFormatToBinary(input)
+}
+
+function byteaHexFormatToBinary (input) {
+  return Buffer.from(input.substr(2), 'hex')
+}
+
 function byteaEscapeFormatToBinary (input) {
   let output = ''
   let i = 0
@@ -23,16 +38,3 @@ function byteaEscapeFormatToBinary (input) {
   }
   return Buffer.from(output, 'binary')
 }
-
-function byteaHexFormatToBinary (input) {
-  return Buffer.from(input.substr(2), 'hex')
-}
-
-function byteaToBinary (input) {
-  if (/^\\x/.test(input)) {
-    return byteaHexFormatToBinary(input)
-  }
-  return byteaEscapeFormatToBinary(input)
-}
-
-module.exports = byteaToBinary

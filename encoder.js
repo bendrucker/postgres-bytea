@@ -1,6 +1,8 @@
+'use strict'
+
 const { Transform } = require('stream')
 
-class BinaryToByteaStreamTransform extends Transform {
+class ByteaEncoder extends Transform {
   constructor () {
     super()
     this.push('\\\\x')
@@ -12,8 +14,4 @@ class BinaryToByteaStreamTransform extends Transform {
   }
 }
 
-function binaryToByteaStream () {
-  return new BinaryToByteaStreamTransform()
-}
-
-module.exports = binaryToByteaStream
+module.exports = ByteaEncoder
