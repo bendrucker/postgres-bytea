@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "concat-stream": "2.0.0",
-    "standard": "^14.0.0",
+    "standard": "^15.0.0",
     "stream-to-promise": "^3.0.0",
     "tape": "^5.0.0",
     "tape-promise": "4.0.0"
