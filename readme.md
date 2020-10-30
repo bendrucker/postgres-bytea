@@ -1,4 +1,4 @@
-# postgres-bytea [![tests](https://github.com/bendrucker//Users/ben/src/workflows/tests/badge.svg)](https://github.com/bendrucker//Users/ben/src/actions?query=workflow%3Atests)
+# postgres-bytea [![tests](https://github.com/bendrucker/postgres-bytea/workflows/tests/badge.svg)](https://github.com/bendrucker/postgres-bytea/actions?query=workflow%3Atests)
 
 > Decode/encode Postgres bytea strings to Buffers
 
