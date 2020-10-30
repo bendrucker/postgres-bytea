@@ -1,4 +1,4 @@
-# postgres-bytea [![Build Status](https://travis-ci.org/bendrucker/postgres-bytea.svg?branch=master)](https://travis-ci.org/bendrucker/postgres-bytea)
+# postgres-bytea [![tests](https://github.com/bendrucker//Users/ben/src/workflows/tests/badge.svg)](https://github.com/bendrucker//Users/ben/src/actions?query=workflow%3Atests)
 
 > Decode/encode Postgres bytea strings to Buffers
 
